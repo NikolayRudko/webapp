@@ -1,6 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<jsp:include page="_head.jsp"></jsp:include>
+<head>
+    <jsp:include page="_head.jsp"></jsp:include>
+    <title>Login</title>
+</head>
 <body>
 <div class="shell">
     <!-- Header -->

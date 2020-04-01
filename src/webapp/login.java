@@ -15,9 +15,6 @@ import java.sql.SQLException;
 public class login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-       /* PrintWriter out = response.getWriter();
-        out.print("Login-name:" + request.getParameter("loginname") + "Password:" + request.getParameter("password"));*/
-
         ValidUser validUserObjects = new ValidUser();
         request.setAttribute("username", request.getParameter("loginname"));
         request.setAttribute("password", request.getParameter("password"));
@@ -25,8 +22,8 @@ public class login extends HttpServlet {
         try {
             if (validUserObjects.isValidUserCredentials(request.getParameter("loginname"), request.getParameter("password"))) {
                 request.getRequestDispatcher("/welcome.jsp").forward(request, response);
-            }else {
-                request.setAttribute("errorMassage" , "Invalid login or password. Try again.");
+            } else {
+                request.setAttribute("errorMassage", "Invalid login or password. Try again.");
                 request.getRequestDispatcher("/login.jsp").forward(request, response);
             }
         } catch (SQLException throwables) {

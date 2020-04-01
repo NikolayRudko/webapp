@@ -2,7 +2,7 @@
 <html>
 <head>
     <jsp:include page="_head.jsp"></jsp:include>
-    <title>Welcome</title>
+    <title>Products</title>
 </head>
 <body>
 <div class="shell">
@@ -10,11 +10,11 @@
     <jsp:include page="_header.jsp"></jsp:include>
     <!-- End Header -->
 
-    <!-- User info-->
-    <div><h1>Welcome</h1>
-        <p>Dear: ${username}</p>
-        <p>Your password is: ${password} </p></div>
-    <%--end user info--%>
+    <!-- Content-->
+    <div>
+        <p>Products</p>
+    </div>
+    <%--end Content--%>
 
     <!-- Footer -->
     <jsp:include page="_footer.jsp"></jsp:include>
