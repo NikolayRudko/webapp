@@ -12,18 +12,17 @@
 
     <!--login-->
     </head>
-    <body>
 
     <div id="login">
         <h1>Авторизация</h1>
         <form action="/login" method="post" class="my-form">
             <div class="form-group">
                 <label for="loginname">Введите e-mail:</label>
-                <input  type="text" name="loginname" id="loginname" placeholder="E-mail"/>
+                <input type="text" name="loginname" id="loginname" placeholder="E-mail"/>
             </div>
             <div class="form-group">
                 <label for="password">Введите пароль:</label>
-                <input  type="password" name="password" id="password"  placeholder="Пароль"/>
+                <input type="password" name="password" id="password" placeholder="Пароль"/>
             </div>
             <div class="form-group">
                 <a href="#" id="s-h-pass">Показать пароль</a>
