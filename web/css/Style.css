@@ -427,11 +427,11 @@ h2 {
     padding-right: 20px
 }
 
-/*for login*/
-
 #footer a {
     color: #b8b8b8;
 }
+
+/*for login*/
 
 #login {
     padding-top: 50px;
@@ -483,4 +483,33 @@ h2 {
     text-align: center;
     padding-top: 10px;
     font-size: 18px;
+}
+
+/*contacts*/
+
+.contacts {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    height: 450px;
+}
+
+.contacts .map {
+    float: left;
+    width: 600px;
+    height: 400px;
+    margin-left: 25px;
+}
+
+.contacts .contact-box {
+    float: right;
+    margin-right: 25px;
+    padding: 20px;
+    background: #292929;
+    width: 250px;
+}
+
+.contacts .contact-box p {
+    font-size: 18px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }

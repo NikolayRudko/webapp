@@ -177,7 +177,7 @@
                 <ul class="line">
                     <li>
                         <a class="frm" href="#"><img src="css/images/car1.jpg" alt=""/></a>
-                        <a href="#">Улушение двигателя</a>
+                        <a href="#">Улучшение двигателя</a>
                     </li>
                     <li>
                         <a class="frm" href="#"><img src="css/images/car2.jpg" alt=""/></a>
