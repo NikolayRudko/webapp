@@ -30,7 +30,7 @@
             <div class="links">
                 <div class="cl">&nbsp;</div>
                 <a href="login.jsp" class="left">Логин</a>
-                <a href="#" class="right">Регистрация</a>
+                <a href="localLogin.jsp" class="right">Регистрация</a>
                 <div class="cl">&nbsp;</div>
             </div>
             <!-- End Sign In Links -->

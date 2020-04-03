@@ -1,18 +1,19 @@
 package dataLyer;
 
-import bean.User;
-
 import java.sql.*;
 
 public class DB_user {
 
     //JDBC driver name and database URL
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+
+    /*
+    //Data for working with local data base.
     //static final String DB_URL = "jdbc:mysql://localhost/webapp";
 
-    // Database credentials
-    /*static final String USER = "webappuser";
-      static final String PASS = "Test@12345678";*/
+    // Database credentials for local DB
+    static final String USER = "webappuser";
+     static final String PASS = "Test@12345678";*/
 
     public boolean isValidUserLogin(String sUserName, String sUserPassword) throws SQLException {
 
@@ -29,7 +30,7 @@ public class DB_user {
             //STEP 3: Open a connection
             System.out.println("Connecting to database...");
 
-            //conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            //workWithDB.conn = DriverManager.getConnection(DB_URL, USER, PASS);
             String DB_Url = System.getProperty("JDBC_CONNECTION_STRING");
             conn = DriverManager.getConnection(DB_Url);
 
@@ -37,7 +38,7 @@ public class DB_user {
             String DB_User = System.getProperty("JDBC_USER");
             String DB_Password = System.getProperty("JDBC_PASSWORD");
             String DB_Connection_String = DB_Url + "? User =" + DB_User + "& password =" + DB_Password;
-            conn = DriverManager.getConnection(DB_Connection_String);*/
+            workWithDB.conn = DriverManager.getConnection(DB_Connection_String);*/
 
             //STEP 4: Execute a query
             System.out.println("Create a statement...");
