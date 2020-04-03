@@ -513,3 +513,49 @@ h2 {
     padding-top: 5px;
     padding-bottom: 5px;
 }
+
+/*help*/
+
+
+.help {
+    font-size: 14px;
+    width: 910px;
+    margin-left: 12px;
+    padding-bottom: 20px;
+    padding-top: 20px
+}
+
+.help h1{
+    padding-bottom: 20px;
+    color: #f5db2d;
+    text-align: center;
+}
+
+.help .collapsible {
+    background-color: #292929;
+    color: #f5db2d;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+}
+
+.help .active, .collapsible:hover {
+    background-color: #f5db2d;
+    color: #000000;
+}
+
+.help_content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #292929;
+    color: #ffffff;
+    border-bottom-width: 2px; /* Толщина линии внизу */
+    border-bottom-style: solid; /* Стиль линии внизу */
+    border-bottom-color: #f5db2d; /* Цвет линии внизу */
+}
