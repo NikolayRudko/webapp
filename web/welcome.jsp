@@ -12,12 +12,14 @@
     <!-- End Header -->
 
     <!-- User info-->
-    <div><h1>Welcome</h1>
-
-        <% UserBean userBean = (UserBean) session.getAttribute("currentSessionUser");%>
-
-        <p>Dear: <%= userBean.getUserName()%></p>
+    <% UserBean userBean = (UserBean) session.getAttribute("currentSessionUser");%>
+    <div><h1>Welcome dear <%= userBean.getFirstName() + " " + userBean.getLastName()%></h1>
+        <p>id: <%= userBean.getId()%></p>
+        <p>Your e-mail is: <%= userBean.getUserName()%></p>
         <p>Your password is: <%=userBean.getUserPassword()%></p>
+        <p>Your first name is: <%=userBean.getFirstName()%></p>
+        <p>Your last name is: <%=userBean.getLastName()%></p>
+
     </div>
     <%--end user info--%>
 

@@ -10,6 +10,7 @@ public class ConnectionManager {
     static String url;
 
     public static Connection getConnection() {
+        //for local BD
         String hostName = "localhost";
         String dbName = "webapp";
         String userName = "webappuser";
@@ -26,13 +27,13 @@ public class ConnectionManager {
             String DB_Url = System.getProperty("JDBC_CONNECTION_STRING");
 
             try {
-                //con = DriverManager.getConnection(url, userName, password);
-                con = DriverManager.getConnection(DB_Url);
+                con = DriverManager.getConnection(url, userName, password);
+                //con = DriverManager.getConnection(DB_Url);
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
         } catch (ClassNotFoundException e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
         return con;
     }

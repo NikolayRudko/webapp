@@ -5,6 +5,8 @@ public class UserBean {
     private int id;
     private String userName;
     private String userPassword;
+    private String firstName;
+    private String lastName;
     public boolean valid;
 
     //Get/set
@@ -30,6 +32,22 @@ public class UserBean {
 
     public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public boolean isValid() {

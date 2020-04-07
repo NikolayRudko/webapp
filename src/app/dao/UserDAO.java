@@ -42,13 +42,20 @@ public class UserDAO {
 
             //if user exists set the isValid variable to true
             else {
+                int id = rs.getInt("id");
                 String name = rs.getString("user_name");
                 String userPassword = rs.getString("user_password");
+                String firstName = rs.getString("first_name");
+                String lastName = rs.getString("last_name");
 
-                System.out.println("Welcome " + name);
+                System.out.printf("Welcome: %s %s", firstName, lastName);
+                System.out.println("Your e-mail: " + name);
 
+                bean.setId(id);
                 bean.setUserName(name);
-                bean.setUserPassword(password);
+                bean.setUserPassword(userPassword);
+                bean.setFirstName(firstName);
+                bean.setLastName(lastName);
                 bean.setValid(true);
             }
         } catch (Exception ex) {
@@ -60,6 +67,7 @@ public class UserDAO {
                 try {
                     rs.close();
                 } catch (Exception e) {
+                    e.printStackTrace();
                 }
                 rs = null;
             }
@@ -68,6 +76,7 @@ public class UserDAO {
                 try {
                     stmt.close();
                 } catch (Exception e) {
+                    e.printStackTrace();
                 }
             }
 
@@ -75,6 +84,7 @@ public class UserDAO {
                 try {
                     currentCon.close();
                 } catch (Exception e) {
+                    e.printStackTrace();
                 }
                 currentCon = null;
             }
