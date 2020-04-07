@@ -15,11 +15,19 @@ public class ConnectionManager {
         String userName = "webappuser";
         String password = "Test@12345678";
 
+        String url;
+        url = "jdbc:mysql://" + hostName + ":3306/" + dbName;
+       // url = System.getProperty("JDBC_CONNECTION_STRING");
         try {
-            String url = "jdbc:mysql://" + hostName + ":3306/" + dbName;
+
             Class.forName("com.mysql.jdbc.Driver");
+
+
+            String DB_Url = System.getProperty("JDBC_CONNECTION_STRING");
+
             try {
-                con = DriverManager.getConnection(url, userName, password);
+                //con = DriverManager.getConnection(url, userName, password);
+                con = DriverManager.getConnection(DB_Url);
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
