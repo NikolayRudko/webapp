@@ -15,7 +15,6 @@
     <div><h1>Welcome</h1>
 
         <% UserBean userBean = (UserBean) session.getAttribute("currentSessionUser");%>
-        Welcome <%= userBean.getUserName() + " " + userBean.getUserPassword() %>
 
         <p>Dear: <%= userBean.getUserName()%></p>
         <p>Your password is: <%=userBean.getUserPassword()%></p>

@@ -14,12 +14,8 @@ import java.io.PrintWriter;
 
 @WebServlet(name = "LoginServlet")
 public class LoginServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
-        out.print("Login-name:" + request.getParameter("un") + "Password:" + request.getParameter("pw"));
-    }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         UserBean user = new UserBean();
         user.setUserName(request.getParameter("loginname"));
         user.setUserPassword(request.getParameter("password"));
@@ -39,7 +35,12 @@ public class LoginServlet extends HttpServlet {
                 request.getRequestDispatcher("/login.jsp").forward(request, response);
             }
         } catch (Throwable theException) {
-           theException.printStackTrace();
+            theException.printStackTrace();
         }
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        PrintWriter out = response.getWriter();
+        out.print("Login-name:" + request.getParameter("loginname") + "Password:" + request.getParameter("password"));
     }
 }

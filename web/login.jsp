@@ -15,7 +15,7 @@
 
     <div id="login">
         <h1>Авторизация</h1>
-        <form action="/login" method="post" class="my-form">
+        <form action="/loginServlet" method="post" class="my-form">
             <div class="form-group">
                 <label for="loginname">Введите e-mail:</label>
                 <input type="text" name="loginname" id="loginname" placeholder="E-mail"/>
