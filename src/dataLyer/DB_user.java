@@ -1,7 +1,5 @@
 package dataLyer;
 
-import bean.User;
-
 import java.sql.*;
 
 public class DB_user {
@@ -79,5 +77,4 @@ public class DB_user {
         System.out.println("Closing DB Connection");
         return isValidUser;
     }
-
 }

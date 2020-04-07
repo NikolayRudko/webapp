@@ -1,3 +1,4 @@
+<%@ page import="app.bean.UserBean" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -12,8 +13,13 @@
 
     <!-- User info-->
     <div><h1>Welcome</h1>
-        <p>Dear: ${username}</p>
-        <p>Your password is: ${password} </p></div>
+
+        <% UserBean userBean = (UserBean) session.getAttribute("currentSessionUser");%>
+        Welcome <%= userBean.getUserName() + " " + userBean.getUserPassword() %>
+
+        <p>Dear: <%= userBean.getUserName()%></p>
+        <p>Your password is: <%=userBean.getUserPassword()%></p>
+    </div>
     <%--end user info--%>
 
     <!-- Footer -->
