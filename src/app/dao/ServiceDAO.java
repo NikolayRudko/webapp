@@ -1,22 +1,23 @@
 package app.dao;
 
 import app.bean.Product;
+import app.bean.Service;
 import app.conn.ConnectionManager;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductDAO {
+public class ServiceDAO {
     static Connection currentCon = null;
     static ResultSet rs = null;
 
-    public static List<Product> queryProduct() throws SQLException {
+    public static List<Service> queryService() throws SQLException {
         PreparedStatement pstm = null;
-        String searchQuery = "Select a.id, a.product_name, a.product_description, a.product_price from products a ";
+        String searchQuery = "Select a.id, a.service_name, a.service_description, a.service_price from services a";
 
         System.out.println("Query: " + searchQuery);
-        List<Product> list = new ArrayList<Product>();
+        List<Service> list = new ArrayList<Service>();
         try {
             currentCon = ConnectionManager.getConnection();
             pstm = currentCon.prepareStatement(searchQuery);
@@ -25,21 +26,22 @@ public class ProductDAO {
 
             while (rs.next()) {
                 int id = rs.getInt("id");
-                String name = rs.getString("product_name");
-                String description = rs.getString("product_description");
-                float price = rs.getFloat("product_price");
-                Product product = new Product();
-                product.setId(id);
-                product.setName(name);
-                product.setDescription(description);
-                product.setPrice(price);
-                list.add(product);
-            }
+                String name = rs.getString("service_name");
+                String description = rs.getString("service_description");
+                float price = rs.getFloat("service_price");
+                Service service = new Service();
 
+                service.setId(id);
+                service.setName(name);
+                service.setDescription(description);
+                service.setPrice(price);
+                list.add(service);
+            }
 
         } catch (Exception ex) {
             System.out.println("Statement failed: An Exception has occurred! " + ex);
         } finally {
+            //close
             if (rs != null) {
                 try {
                     rs.close();
@@ -48,7 +50,7 @@ public class ProductDAO {
                 }
                 rs = null;
             }
-
+            //close
             if (pstm != null) {
                 try {
                     pstm.close();
@@ -56,7 +58,7 @@ public class ProductDAO {
                     e.printStackTrace();
                 }
             }
-
+            //close
             if (currentCon != null) {
                 try {
                     currentCon.close();
@@ -66,7 +68,6 @@ public class ProductDAO {
                 currentCon = null;
             }
         }
-
         return list;
     }
 }

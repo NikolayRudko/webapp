@@ -10,7 +10,7 @@
             <li><a class="active" href="/">Главная</a></li>
             <li><a href="news.jsp">Новости</a></li>
             <li><a href="/productList">Товары</a></li>
-            <li><a href="services.jsp">Услуги</a></li>
+            <li><a href="/serviceList">Услуги</a></li>
             <li><a href="contacts.jsp">Контакты</a></li>
             <li><a href="help.jsp">Помощь</a></li>
         </ul>

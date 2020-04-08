@@ -1,5 +1,3 @@
-<%@ page import="java.util.List" %>
-<%@ page import="app.bean.Product" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
@@ -23,14 +21,6 @@
 
 
         <p style="color: red;">${errorString}</p>
-        <%--    <table>
-                <c:forEach items="${productList}" var="product">
-                    <tr>
-                        <td><c:out value="${product.id}" /></td>
-                &lt;%&ndash;        <td><c:out value="${product.barCode}" /></td>&ndash;%&gt;
-                    </tr>
-                </c:forEach>
-            </table>--%>
 
         <table border="1" cellpadding="5" cellspacing="1">
             <tr>

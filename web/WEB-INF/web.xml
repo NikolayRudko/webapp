@@ -22,4 +22,15 @@
         <servlet-name>ProductList</servlet-name>
         <url-pattern>/productList</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServiceList</servlet-name>
+        <servlet-class>app.servlet.ServiceList</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ServiceList</servlet-name>
+        <url-pattern>/serviceList</url-pattern>
+    </servlet-mapping>
+
 </web-app>
