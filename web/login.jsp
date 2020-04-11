@@ -11,8 +11,6 @@
     <!-- End Header -->
 
     <!--login-->
-    </head>
-
     <div id="login">
         <h1>Авторизация</h1>
         <form action="/loginServlet" method="post" class="my-form">
