@@ -515,8 +515,6 @@ h2 {
 }
 
 /*help*/
-
-
 .help {
     font-size: 14px;
     width: 910px;
@@ -558,4 +556,106 @@ h2 {
     border-bottom-width: 2px; /* Толщина линии внизу */
     border-bottom-style: solid; /* Стиль линии внизу */
     border-bottom-color: #f5db2d; /* Цвет линии внизу */
+}
+/*  for product */
+.products {
+    padding: 50px ;
+}
+
+.products h1 {
+    padding-bottom: 20px;
+    color: #f5db2d;
+    text-align: center;
+}
+
+/*  for product */
+.services {
+    padding: 50px ;
+}
+
+.services h1 {
+    padding-bottom: 20px;
+    color: #f5db2d;
+    text-align: center;
+}
+
+table {
+    padding: 0px 10px;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid black;
+    color: white;
+}
+
+thead th:nth-child(1) {
+    width: 5%;
+}
+
+thead th:nth-child(2) {
+    width: 20%;
+}
+
+thead th:nth-child(3) {
+    width: 65%;
+}
+
+thead th:nth-child(4) {
+    width: 10%;
+}
+
+th, td {
+    padding: 20px;
+}
+
+th {
+    letter-spacing: 2px;
+}
+
+td {
+    letter-spacing: 1px;
+}
+
+tbody td {
+    text-align: center;
+}
+
+tfoot th {
+    text-align: right;
+}
+
+thead, tfoot {
+    background: #f5db2d;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+thead th, tfoot th, tfoot td {
+    background: #f5db2d;
+    border: 3px solid black;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #292929;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #191919;
+}
+
+/* tbody tr {
+     background-image: url(noise.png);
+ }*/
+
+table {
+    background-color: #292929;
+}
+
+caption {
+    /*   font-family: 'Rock Salt', cursive;*/
+    padding: 20px;
+    font-style: italic;
+    caption-side: bottom;
+    color: #666;
+    text-align: right;
+    letter-spacing: 1px;
 }

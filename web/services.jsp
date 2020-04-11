@@ -12,12 +12,39 @@
     <!-- End Header -->
 
     <!-- Content-->
-    <div>
-        <p>Services</p>
+    <div class="services">
+        <h1>Services</h1>
 
         <p style="color: red;">${errorString}</p>
 
-        <table border="1" cellpadding="5" cellspacing="1">
+        <table>
+            <caption>Services</caption>
+            <thead>
+            <tr>
+                <th scope="col">№</th>
+                <th scope="col">Название</th>
+                <th scope="col">Описание</th>
+                <th scope="col">Цена</th>
+            </tr>
+            </thead>
+            <tbody>
+            <c:forEach items="${serviceList}" var="service">
+                <tr>
+                    <th scope="row">${service.id}</th>
+                    <td>${service.name}</td>
+                    <td>${service.description}</td>
+                    <td>${service.price}</td>
+                </tr>
+            </c:forEach>
+            </tbody>
+            <tfoot>
+            <tr>
+                <th scope="row" colspan="4">Ценну уточняйте у специалиста</th>
+            </tr>
+            </tfoot>
+        </table>
+
+     <%--   <table>
             <tr>
                 <th>Id</th>
                 <th>Name</th>
@@ -26,14 +53,14 @@
 
             </tr>
             <c:forEach items="${serviceList}" var="service">
-            <tr>
-                <td>${service.id}</td>
-                <td>${service.name}</td>
-                <td>${service.description}</td>
-                <td>${service.price}</td>
-            </tr>
+                <tr>
+                    <td>${service.id}</td>
+                    <td>${service.name}</td>
+                    <td>${service.description}</td>
+                    <td>${service.price}</td>
+                </tr>
             </c:forEach>
-        </table>
+        </table>--%>
     </div>
     <%--end Content--%>
 
