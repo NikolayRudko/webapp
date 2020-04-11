@@ -30,7 +30,7 @@
             <div class="links">
                 <div class="cl">&nbsp;</div>
                 <a href="login.jsp" class="left">Логин</a>
-                <a href="#" class="right">Регистрация</a>
+                <a href="register.jsp" class="right">Регистрация</a>
                 <div class="cl">&nbsp;</div>
             </div>
             <!-- End Sign In Links -->
@@ -72,7 +72,7 @@
                         <div class="cl">&nbsp;</div>
                     </li>
                 </ul>
-                <a href="#" class="up">Больше</a>
+                <a href="news.jsp" class="up">Больше</a>
                 <div class="cl">&nbsp;</div>
             </div>
             <!-- End Box Latest News -->

@@ -24,9 +24,9 @@ public class ConnectionManager {
             Class.forName("com.mysql.jdbc.Driver");
             try {
                 //for local DB
-                con = DriverManager.getConnection(url, userName, password);
+                //con = DriverManager.getConnection(url, userName, password);
                 //for hosting DB
-                //con = DriverManager.getConnection(DB_Url);
+                con = DriverManager.getConnection(DB_Url);
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
