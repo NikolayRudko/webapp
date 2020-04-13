@@ -458,6 +458,7 @@ h2 {
     width: 105px;
     display: inline-block;
     font-size: 13px;
+    padding-top: 5px;
 }
 
 #login .form-group input {
@@ -475,6 +476,7 @@ h2 {
 }
 
 #login #s-h-pass {
+    padding-top: 5px;
     font-size: 13px;
 }
 
@@ -523,7 +525,7 @@ h2 {
     padding-top: 20px
 }
 
-.help h1{
+.help h1 {
     padding-bottom: 20px;
     color: #f5db2d;
     text-align: center;
@@ -557,9 +559,10 @@ h2 {
     border-bottom-style: solid; /* Стиль линии внизу */
     border-bottom-color: #f5db2d; /* Цвет линии внизу */
 }
+
 /*  for product */
 .products {
-    padding: 50px ;
+    padding: 50px;
 }
 
 .products h1 {
@@ -568,9 +571,9 @@ h2 {
     text-align: center;
 }
 
-/*  for product */
+/*  for services */
 .services {
-    padding: 50px ;
+    padding: 50px;
 }
 
 .services h1 {
@@ -579,6 +582,7 @@ h2 {
     text-align: center;
 }
 
+/*for table*/
 table {
     padding: 0px 10px;
     table-layout: fixed;
@@ -642,20 +646,114 @@ tbody tr:nth-child(even) {
     background-color: #191919;
 }
 
-/* tbody tr {
-     background-image: url(noise.png);
- }*/
-
 table {
     background-color: #292929;
 }
 
 caption {
-    /*   font-family: 'Rock Salt', cursive;*/
     padding: 20px;
     font-style: italic;
     caption-side: bottom;
     color: #666;
     text-align: right;
     letter-spacing: 1px;
+}
+
+/*for register*/
+.register {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.register h1 {
+    padding-bottom: 20px;
+    color: #f5db2d;
+    text-align: center;
+}
+
+.register .my-form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.register .form-group {
+    padding: 5px;
+    color: #e4e4e4;
+}
+
+.register .form-group label {
+    width: 290px;
+    display: inline-block;
+    font-size: 13px;
+    padding-top: 5px;
+}
+
+.register .form-group input {
+    background: #292929;
+    border: 0;
+    font-size: 14px;
+    line-height: 17px;
+    color: #e4e4e4;
+    width: 290px;
+    padding: 8px 0;
+}
+
+.register .form-control {
+    padding: 5px;
+    color: #e4e4e4;
+}
+
+.register .form-control input {
+
+    border: 0;
+    font-size: 14px;
+    line-height: 17px;
+    color: #e4e4e4;
+    width: 140px;
+    padding: 8px 0;
+}
+
+.register .form-control input#cancel {
+    float: left;
+    background: #292929;
+}
+
+.register .form-control input#enter {
+    float: right;
+    color: #000;
+    background: #f5db2d;
+}
+
+.register p {
+    color: #f5db2d;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+/*for Welcome*/
+
+#welcome h1 {
+    color: #f5db2d;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#welcome table {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#welcome th, td {
+    padding: 10px;
+}
+
+#welcome th {
+    text-align: left;
+    font-size: 12px;
+}
+
+#welcome tbody td {
+    text-align: right;
 }

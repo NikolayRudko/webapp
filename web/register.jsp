@@ -1,6 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<
 <head>
     <jsp:include page="_head.jsp"></jsp:include>
     <title>Register</title>
@@ -12,8 +11,7 @@
     <!-- End Header -->
 
     <!--Register-->
-    <div id="register">
-
+    <div class="register">
         <script>
             function validate() {
                 var email = document.form.email.value;
@@ -23,68 +21,52 @@
                 var conPassword = document.form.conPassword.value;
 
                 if (email == null || email === "") {
-                    alert("Email can't be blank");
+                    alert("Поле Email не заполнено");
                     return false;
                 }
 
                 if (firstName == null || firstName === "") {
-                    alert("First name can't be blank");
+                    alert("Поле Имя не заполнено");
                     return false;
                 }
 
                 if (lastName == null || lastName === "") {
-                    alert("Last name can't be blank");
+                    alert("Поле Фамилия не заполнено");
                     return false;
                 }
 
                 if (password == null || password === "") {
-                    alert("Password can't be blank");
+                    alert("Поле Пароль не заполнено");
                     return false;
                 } else if (password.length < 6) {
-                    alert("Password must be at least 6 characters long.");
+                    alert("Пароль не может быть короче чем 6 символов");
                     return false;
                 } else if (password !== conPassword) {
-                    alert("Confirm Password should match with the Password");
+                    alert("Пароли не совпадают");
                     return false;
                 }
             }
         </script>
-        <h2>Java Registration application using MVC and MySQL </h2>
-        <form name="form" action="/register" method="post" onsubmit="return validate()">
-            <table align="center">
-                <tr>
-                    <td>Email</td>
-                    <td><input type="text" name="email"/></td>
-                </tr>
-                <tr>
-                    <td>First name</td>
-                    <td><input type="text" name="firstName"/></td>
-                </tr>
-                <tr>
-                    <td>Last name</td>
-                    <td><input type="text" name="lastName"/></td>
-                </tr>
-                <tr>
-                    <td>Password</td>
-                    <td><input type="password" name="password"/></td>
-                </tr>
-                <tr>
-                    <td>Confirm Password</td>
-                    <td><input type="password" name="conPassword"/></td>
-                </tr>
-                <tr>
-                    <td><%=(request.getAttribute("errMessage") == null) ? ""
-                            : request.getAttribute("errMessage")%>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <input type="submit" value="Register">
-                        <input type="reset" value="Reset">
-                    </td>
-                </tr>
-            </table>
+
+        <h1>Регистрация</h1>
+        <form name="form" action="/register" method="post" onsubmit="return validate()" class="my-form">
+            <div class="form-group">
+                <label for="email">Введите e-mail:</label>
+                <input type="text" name="email" id="email" placeholder="E-mail"/>
+                <label for="firstName">Введите имя:</label>
+                <input type="text" name="firstName" id="firstName" placeholder="Имя"/>
+                <label for="lastName">Введите фамилию:</label>
+                <input type="text" name="lastName" id="lastName" placeholder="Фаимилия"/>
+                <label for="password">Введите пароль:</label>
+                <input type="password" name="password" id="password" placeholder="Пароль"/>
+                <label for="conPassword">Поторите пароль:</label>
+                <input type="password" name="conPassword" id="conPassword" placeholder="Пароль"/>
+            </div>
+            <div class="form-control">
+                <input id="cancel" type="reset" value="Отмена">
+                <input id="enter" type="submit" value="Регистрация">
+            </div>
+            <p><%=(request.getAttribute("errMessage") == null) ? "" : request.getAttribute("errMessage")%></p>
         </form>
 
     </div>

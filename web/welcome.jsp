@@ -11,16 +11,42 @@
     <jsp:include page="_header.jsp"></jsp:include>
     <!-- End Header -->
 
+
     <!-- User info-->
     <% UserBean userBean = (UserBean) session.getAttribute("currentSessionUser");%>
-    <div><h1>Welcome dear <%= userBean.getFirstName() + " " + userBean.getLastName()%></h1>
-        <p>id: <%= userBean.getId()%></p>
-        <p>Your e-mail is: <%= userBean.getUserName()%></p>
-        <p>Your password is: <%=userBean.getUserPassword()%></p>
-        <p>Your first name is: <%=userBean.getFirstName()%></p>
-        <p>Your last name is: <%=userBean.getLastName()%></p>
-
-    </div>
+    <div id="welcome">
+        <h1>Welcome dear <%= userBean.getFirstName() + " " + userBean.getLastName()%>
+        </h1>
+        <table>
+            <tbody>
+            <tr>
+                <th scope="row">id:</th>
+                <td><%= userBean.getId()%>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Your e-mail is:</th>
+                <td><%= userBean.getUserName()%>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Your first name is:</th>
+                <td><%=userBean.getFirstName()%>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Your last name is:</th>
+                <td><%=userBean.getLastName()%>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Your password is:</th>
+                <td><%=userBean.getUserPassword()%>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+   </div>
     <%--end user info--%>
 
     <!-- Footer -->

@@ -142,6 +142,6 @@ public class UserDAO {
                 currentCon = null;
             }
         }
-        return "Oops.. Something went wrong there..!";
+        return "Something went wrong there..!";
     }
 }
