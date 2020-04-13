@@ -3,9 +3,7 @@ package app.dao;
 import app.bean.UserBean;
 import app.conn.ConnectionManager;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 
 public class UserDAO {
     static Connection currentCon = null;
@@ -90,5 +88,60 @@ public class UserDAO {
             }
         }
         return bean;
+    }
+
+    public static String registerUser(UserBean newUserBean)
+    {
+
+        String userName = newUserBean.getUserName();
+        String password = newUserBean.getUserPassword();
+        String firstName = newUserBean.getFirstName();
+        String lastName = newUserBean.getLastName();
+
+        PreparedStatement pstm = null;
+
+        //Insert user details into the table 'USERS'
+     /*   String searchQuery = "insert into users(id,user_name,user_password,first_name,last_name)" +
+                " values (NULL,?,?,?,?)"; */
+        String searchQuery = "insert into users(user_name,user_password,first_name,last_name)" +
+                " values (?,?,?,?)";
+        System.out.println(searchQuery);
+        try
+        {
+            currentCon = ConnectionManager.getConnection();
+            //Making use of prepared statements here to insert bunch of data
+            pstm = currentCon.prepareStatement(searchQuery);
+
+            pstm.setString(1,userName);
+            pstm.setString(2,password);
+            pstm.setString(3,firstName);
+            pstm.setString(4,lastName);
+            pstm.executeUpdate();
+            return "SUCCESS";
+        }
+        catch(SQLException e)
+        {
+            e.printStackTrace();
+        }
+        finally {
+            //close
+            if (pstm != null) {
+                try {
+                    pstm.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+            //close
+            if (currentCon != null) {
+                try {
+                    currentCon.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                currentCon = null;
+            }
+        }
+        return "Oops.. Something went wrong there..!";
     }
 }
