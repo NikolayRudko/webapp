@@ -3,6 +3,7 @@
 <html>
 <head>
     <jsp:include page="_head.jsp"></jsp:include>
+    <link rel="stylesheet" type="text/css" href="css/Style.css"/>
     <title>Welcome</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
     <!-- User info-->
     <% UserBean userBean = (UserBean) session.getAttribute("currentSessionUser");%>
     <div id="welcome">
-        <h1>Welcome dear <%= userBean.getFirstName() + " " + userBean.getLastName()%>
+        <h1>Добро пожаловать, <%= userBean.getFirstName() + " " + userBean.getLastName()%>
         </h1>
         <table>
             <tbody>
@@ -25,22 +26,22 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row">Your e-mail is:</th>
+                <th scope="row">Ваш e-mail is:</th>
                 <td><%= userBean.getUserName()%>
                 </td>
             </tr>
             <tr>
-                <th scope="row">Your first name is:</th>
+                <th scope="row">Ваше имя:</th>
                 <td><%=userBean.getFirstName()%>
                 </td>
             </tr>
             <tr>
-                <th scope="row">Your last name is:</th>
+                <th scope="row">Ваша фамилия:</th>
                 <td><%=userBean.getLastName()%>
                 </td>
             </tr>
             <tr>
-                <th scope="row">Your password is:</th>
+                <th scope="row">Ваш пароль:</th>
                 <td><%=userBean.getUserPassword()%>
                 </td>
             </tr>

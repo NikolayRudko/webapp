@@ -733,13 +733,13 @@ caption {
 
 /*for Welcome*/
 
-#welcome h1 {
+#welcome h1{
     color: #f5db2d;
     text-align: center;
     padding: 10px 0;
 }
 
-#welcome table {
+#welcome table{
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -753,7 +753,6 @@ caption {
     text-align: left;
     font-size: 12px;
 }
-
 #welcome tbody td {
     text-align: right;
 }
