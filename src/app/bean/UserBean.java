@@ -9,15 +9,6 @@ public class UserBean {
     private String lastName;
     public boolean valid;
 
-    public UserBean(int id, String userName, String userPassword, String firstName, String lastName) {
-        this.id = id;
-        this.userName = userName;
-        this.userPassword = userPassword;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        valid = false;
-    }
-
     //Get/set
     public int getId() {
         return id;
